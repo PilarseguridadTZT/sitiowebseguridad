@@ -213,7 +213,7 @@ body{
    border-radius: 20px;
 }
 
-/* SECCION REGLAS DE ORO*/
+/* SECCION SAM LOTOTO*/
 
 .reglas{
    background-color: #F2F2F2;
@@ -244,6 +244,60 @@ body{
    display: flex;
    justify-content: space-between;
    align-items: center;
+}
+
+/* slider*/
+.testimony{
+   background-color: #e5e5f7;
+}
+
+.testimony__container{
+   display: grid;
+   grid-template-columns: 50px 1fr 50px;
+   gap: 1em;
+   align-items: center;
+}
+
+.testimony__body{
+   display: grid;
+   grid-template-columns: 1fr max-content;
+   justify-content: space-between;
+   align-items: center;
+   gap: 2em;
+   grid-column: 2/3;
+   grid-row: 1/2;
+   opacity: 0;
+   pointer-events: none;
+}
+
+
+.testimony__body--show{
+   pointer-events: unset;
+   opacity: 1;
+   transition: opacity 1.5s ease-in-out;
+}
+
+.testimony__img{
+   width: 90%;
+   border-radius: 20%;
+   object-fit: cover;
+   object-position: 50% 30%;
+}
+
+.testimony__texts{
+   max-width: 700px;
+}
+
+.testimony__course{
+   background-color: #d7ab28e1;
+   color: #fff;
+   display: inline-block;
+   padding: 5px;
+}
+
+.testimony__arrow{
+   width: 90%;
+   cursor: pointer;
 }
 
 /* footer */
@@ -329,13 +383,28 @@ footer{
    .imagen-port{
       width: 45%;
    }
-
    
    .reglas-ind p{
       font-weight: 300;
       text-align: center;
       font-size: 12px;
    }
+   .testimony__container{
+      grid-template-columns: 30px 1fr 30px;
+   }
+
+  .testimony__body{
+      grid-template-columns: 1fr;
+      grid-template-rows: max-content max-content;
+      gap: 3em;
+      justify-items:center ;
+   }
+
+  .testimony__img{
+      width: 230px;
+      height: 200px;
+      
+  }
 
    .content-foo h4{
       font-size: 10px;
